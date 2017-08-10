@@ -1,0 +1,83 @@
+<view class="header">
+  <view class="cover">
+    <image src="http://game.gtimg.cn/images/yxzj/img201606/heroimg/193/193-mobileskin-1.jpg"></image>
+  </view>
+  <view class="filter"></view>
+</view>
+
+<view class="container">
+
+  <view class="hero-title">
+    <view class="role">战士</view>
+    <view class="name">铠</view>
+  </view>
+
+  <view class="section attr-list">
+    <view class="attr-item">
+      <text class="attr-desc">生存能力</text>
+      <view class="progress">
+        <view class="bar" style="width: 80%;"></view>
+      </view>
+    </view>
+    <view class="attr-item">
+      <view class="attr-desc">攻击伤害</view>
+      <view class="progress">
+        <view class="bar" style="width: 70%;"></view>
+      </view>
+    </view>
+    <view class="attr-item">
+      <view class="attr-desc">技能效果</view>
+      <view class="progress">
+        <view class="bar" style="width: 40%;"></view>
+      </view>
+    </view>
+    <view class="attr-item">
+      <view class="attr-desc">上手难度</view>
+      <view class="progress">
+        <view class="bar" style="width: 30%;"></view>
+      </view>
+    </view>
+  </view>
+
+  <view class="section skills">
+    <view class="section-title">技能介绍</view>
+    <view class="skill-tab">
+      <view class="skill-tab-item current">
+        <image src="http://game.gtimg.cn/images/yxzj/img201606/heroimg/193/19300.png"></image>
+      </view>
+      <view class="skill-tab-item">
+        <image src="http://game.gtimg.cn/images/yxzj/img201606/heroimg/193/19310.png"></image>
+      </view>
+      <view class="skill-tab-item">
+        <image src="http://game.gtimg.cn/images/yxzj/img201606/heroimg/193/19320.png"></image>
+      </view>
+      <view class="skill-tab-item">
+        <image src="http://game.gtimg.cn/images/yxzj/img201606/heroimg/193/19330.png"></image>
+      </view>
+    </view>
+    <view class="skill-content">
+      <view class="skill-content-item">
+        <view class="skill-content-header">
+          <view class="skill-name">修罗之魂</view>
+          <view class="skill-value">(冷却值：0  消耗：0)</view>
+          <view class="skill-tag">主升</view>
+        </view>
+        <view class="skill-desc">被动：铠拥有精湛的战斗技巧，如果铠的挥砍（普攻与2技能）只命中了一个单位，则这个单位将受到50%额外伤害。</view>
+        <view class="skill-tips">小提示：在铠利用2技能攻击敌方英雄时候尽可能多的利用普攻来造成额外伤害。</view>
+      </view>
+    </view> 
+  </view>
+
+  <view class="section">
+    <view class="section-title">铭文搭配</view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">出装推荐</view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">召唤师技能</view>
+  </view>
+
+</view>

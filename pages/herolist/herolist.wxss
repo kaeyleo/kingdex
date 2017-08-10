@@ -1,0 +1,91 @@
+.header {
+  margin-top: 48rpx;
+}
+.cover {
+  margin: 0 auto;
+  width: 280rpx;
+  height: 280rpx;
+  box-shadow: 0 4px 16px #A3AEC5;
+  border-radius: 4px;
+}
+.cover image {
+  width: 100%;
+  height: 100%;
+}
+.intro {
+  margin: 26rpx auto 0 auto;
+  width: 96%;
+  text-align: center;
+}
+.intro .name {
+  font-size: 36rpx;
+  font-weight: 500;
+}
+.intro .desc {
+  margin-top: 8rpx;
+  font-size: 28rpx;
+  line-height: 1.4;
+  color: #8A8D9C;
+}
+.list {
+  margin-top: 50rpx;
+}
+.list-item {
+  position: relative;
+  margin-bottom: 24rpx;
+  height: 160rpx; 
+  background-color: #fff;
+  border-radius: 40px 4px 4px 40px;
+  box-shadow: 0px 1px 4px #D8DDE5;
+  line-height: 160rpx;
+  overflow: hidden;
+}
+.list-avatar {
+  position: relative;
+  margin: 20rpx 16rpx 0 20rpx;
+  float: left;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%; 
+  overflow: hidden; 
+}
+.list-img {
+  position: absolute;
+  top: -3%;
+  left: -3%;
+  width: 106%;
+  height: 106%;
+}
+.list-text {
+  float: left;
+}
+.hero_name {
+  font-size: 32rpx;
+  color: #474747;
+}
+.new_tag {
+  position: absolute;
+  top: 62rpx;
+  display: inline-block;
+  width: 38px;
+  height: 19px;
+  background: linear-gradient(to right, #FF9966, #FF5E62);
+  font-size: 28rpx;
+  color: #fff;
+  line-height: 18px;
+  border-radius: 10px 10px 10px 2px;
+  text-align: center;
+  margin-left: 6px;
+}
+.list-icon {
+  float: right;
+  margin-top: 20rpx;
+  margin-right: 28rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+.list-icon image {
+  width: 100%;
+  height: 100%;
+  color: #D2D6DE;
+}

@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/equip/equip",
+    "pages/herolist/herolist",
+    "pages/hero_detail/hero_detail"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "王者图鉴",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#A4A4A4",
+    "selectedColor": "#D4A93D",
+    "backgroundColor": "#fff",
+    "position": "top",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "英雄"
+      },
+      {
+        "pagePath": "pages/equip/equip",
+        "text": "装备"
+      },
+      {
+        "pagePath": "pages/equip/equip",
+        "text": "铭文"
+      }
+    ]
+  }
+}

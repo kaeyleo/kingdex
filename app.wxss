@@ -1,0 +1,26 @@
+/**app.wxss**/
+.container {
+  width: 94%;
+  padding-bottom: 60rpx;
+  margin: 0 auto;
+  font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+}
+navigator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0;
+  z-index: 3;
+}
+.section {
+  margin-top: 46rpx;
+}
+.section-title {
+  font-size: 38rpx;
+  color: #444;
+  font-weight: 500;
+  margin-bottom: 24rpx;
+}
