@@ -30,6 +30,28 @@
   margin-top: -60px;
   z-index: 3;
 }
+.slist {
+  display: flex;
+}
+.sitem {
+  flex: 1;
+  text-align: center;
+}
+.sitem image {
+  display: block;
+  margin: 0 auto;
+  width: 106rpx;
+  height: 106rpx;
+}
+.sname {
+  margin-top: 8px;
+  font-size: 32rpx;
+  color: #323232;
+}
+.sdesc {
+  font-size: 26rpx;
+  color: #8C9298;
+}
 
 .hero-title {
   /* background-color: #ccc;  */
@@ -90,9 +112,9 @@
 }
 .skill-tab-item image {
   display: block;
+  margin: 0 auto;
   width: 146rpx;
   height: 146rpx;
-  margin: 0 auto;
   border-radius: 50%;
   border: 4px solid #B9C0C5; 
   box-sizing: border-box; 
@@ -137,4 +159,20 @@
 }
 .skill-tips {
   color: #8C9298;
+}
+
+.rune image {
+  width: 94rpx;
+  height: 110rpx;
+}
+
+.summoner .slist {
+  display: block;
+}
+.summoner .sitem {
+  display: inline-block;
+  margin-right: 20px;
+}
+.summoner image {
+  border-radius: 50%;
 }

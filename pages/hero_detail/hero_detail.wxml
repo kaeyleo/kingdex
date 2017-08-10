@@ -68,16 +68,46 @@
     </view> 
   </view>
 
-  <view class="section">
+  <view class="section rune">
     <view class="section-title">铭文搭配</view>
+    <view class="slist">
+      <view class="sitem">
+        <image src="http://game.gtimg.cn/images/yxzj/img201606/mingwen/1503.png"></image>
+        <view class="sname">传承</view>
+        <view class="sdesc">物理攻击力+3.2</view>
+      </view>
+      <view class="sitem">
+        <image src="http://game.gtimg.cn/images/yxzj/img201606/mingwen/3514.png"></image>
+        <view class="sname">鹰眼</view>
+        <view class="sdesc">物理攻击力+0.9</view>
+        <view class="sdesc">物理穿透+6.4</view>
+      </view>
+      <view class="sitem">
+        <image src="http://game.gtimg.cn/images/yxzj/img201606/mingwen/2517.png"></image>
+        <view class="sname">隐匿</view>
+        <view class="sdesc">物理攻击力+1.6</view>
+        <view class="sdesc">移速+1%</view>
+      </view>
+    </view>
   </view>
 
   <view class="section">
     <view class="section-title">出装推荐</view>
+
   </view>
 
-  <view class="section">
+  <view class="section summoner">
     <view class="section-title">召唤师技能</view>
+    <view class="slist">
+      <view class="sitem">
+        <image src="http://game.gtimg.cn/images/yxzj/img201606/summoner/80108.jpg"></image>
+        <view class="sname">斩杀</view>
+      </view>
+      <view class="sitem">
+        <image src="http://game.gtimg.cn/images/yxzj/img201606/summoner/80107.jpg"></image>
+        <view class="sname">净化</view>
+      </view>
+    </view>
   </view>
 
 </view>
