@@ -37,30 +37,11 @@
   height: 100%;
   z-index: 0;
 }
-.hero-slider {
-  white-space: nowrap;
-  display: flex;
-}
-.hero-slider-item {
-  position: relative;
-  display: inline-block;
-  margin-right: 36rpx;  
-  width: 120rpx; 
-  text-align: center;
-}
-.hero-slider-item .avatar {
-  margin: 0 auto 2px auto;
-  width: 120rpx;
-  height: 120rpx;
-  border-radius: 50%;
-  overflow: hidden;
-}
-.hero-slider-item image {
+.hero-slider image {
   width: 106%;
   height: 106%;
 }
-.hero-slider-item text {
-  font-size: 28rpx;
+.hero-slider text {
   color: #7D7D7D;
 }
 .article-list-item {

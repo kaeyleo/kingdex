@@ -40,16 +40,22 @@
 .sitem image {
   display: block;
   margin: 0 auto;
-  width: 106rpx;
-  height: 106rpx;
+  width: 110rpx;
+  height: 110rpx;
 }
 .sname {
   margin-top: 8px;
-  font-size: 32rpx;
+  font-size: 28rpx;
   color: #323232;
 }
 .sdesc {
   font-size: 26rpx;
+  color: #8C9298;
+}
+
+.prompt {
+  margin-top: 8px;
+  font-size: 28rpx;
   color: #8C9298;
 }
 
@@ -89,7 +95,7 @@
   top: 7px;
   float: left;
   width: calc(100% - 80px);
-  height: 9px;
+  height: 10px;
   background-color: #CED7DF;
   border-radius: 10px;
 }
@@ -132,12 +138,8 @@
   position: relative;
 }
 .skill-name {
-  font-size: 36rpx;
+  font-size: 32rpx;
   color: #323232;
-}
-.skill-desc, .skill-tips {
-  margin-top: 8px;
-  font-size: 30rpx;
 }
 .skill-value {
   font-size: 26rpx;
@@ -155,10 +157,22 @@
   border-radius: 10px;
 }
 .skill-desc {
+  margin-top: 8px;
+  font-size: 28rpx;
   color: #323232;
 }
-.skill-tips {
-  color: #8C9298;
+
+.equip-build {
+  margin-bottom: 16px;
+}
+.equip-tlt {
+  margin-bottom: 10px;
+  font-size: 34rpx;
+  color: #555;
+}
+.equip-slider .avatar {
+  width: 110rpx;
+  height: 110rpx;
 }
 
 .rune image {

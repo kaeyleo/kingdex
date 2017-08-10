@@ -40,50 +40,50 @@
   </view>
   <view class="section">
     <view class="section-title">周免英雄</view>
-    <scroll-view class="hero-slider" scroll-x="true">
-      <view class="hero-slider-item">
+    <scroll-view class="g-slider hero-slider" scroll-x="true">
+      <view class="g-slider-item">
         <navigator url="../hero_detail/hero_detail"></navigator>
         <view class="avatar">
           <image src="http://game.gtimg.cn/images/yxzj/img201606/heroimg/121/121.jpg"></image>
         </view>
         <text>芈月</text>
       </view>
-      <view class="hero-slider-item">
+      <view class="g-slider-item">
         <navigator url="../hero_detail/hero_detail"></navigator>
         <view class="avatar">
           <image src="http://game.gtimg.cn/images/yxzj/img201606/heroimg/112/112.jpg"></image>
         </view>
         <text>鲁班七号</text>
       </view>
-      <view class="hero-slider-item">
+      <view class="g-slider-item">
         <navigator url="../hero_detail/hero_detail"></navigator>
         <view class="avatar">
           <image src="http://game.gtimg.cn/images/yxzj/img201606/heroimg/134/134.jpg"></image>
         </view>
         <text>达摩</text>
       </view>
-      <view class="hero-slider-item">
+      <view class="g-slider-item">
         <navigator url="../hero_detail/hero_detail"></navigator>
         <view class="avatar">
           <image src="http://game.gtimg.cn/images/yxzj/img201606/heroimg/114/114.jpg"></image>
         </view>
         <text>刘禅</text>
       </view>
-      <view class="hero-slider-item">
+      <view class="g-slider-item">
         <navigator url="../hero_detail/hero_detail"></navigator>
         <view class="avatar">
           <image src="http://game.gtimg.cn/images/yxzj/img201606/heroimg/191/191.jpg"></image>
         </view>
         <text>大乔</text>
       </view>
-      <view class="hero-slider-item">
+      <view class="g-slider-item">
         <navigator url="../herolist/herolist"></navigator>
         <view class="avatar">
           <image src="http://game.gtimg.cn/images/yxzj/img201606/heroimg/173/173.jpg"></image>
         </view>
         <text>李元芳</text>
       </view>
-      <view class="hero-slider-item">
+      <view class="g-slider-item">
         <navigator url="../herolist/herolist"></navigator>
         <view class="avatar">
           <image src="http://game.gtimg.cn/images/yxzj/img201606/heroimg/113/113.jpg"></image>

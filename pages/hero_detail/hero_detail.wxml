@@ -63,7 +63,7 @@
           <view class="skill-tag">主升</view>
         </view>
         <view class="skill-desc">被动：铠拥有精湛的战斗技巧，如果铠的挥砍（普攻与2技能）只命中了一个单位，则这个单位将受到50%额外伤害。</view>
-        <view class="skill-tips">小提示：在铠利用2技能攻击敌方英雄时候尽可能多的利用普攻来造成额外伤害。</view>
+        <view class="prompt">小提示：在铠利用2技能攻击敌方英雄时候尽可能多的利用普攻来造成额外伤害。</view>
       </view>
     </view> 
   </view>
@@ -91,9 +91,104 @@
     </view>
   </view>
 
-  <view class="section">
+  <view class="section equip">
     <view class="section-title">出装推荐</view>
-
+    <view class="equip-build">
+      <view class="equip-tlt">顺风出装</view>
+      <scroll-view class="g-slider equip-slider" scroll-x="true">
+        <view class="g-slider-item">
+          <navigator url="../hero_detail/hero_detail"></navigator>
+          <view class="avatar">
+            <image src="http://game.gtimg.cn/images/yxzj/img201606/itemimg/1137.jpg"></image>
+          </view>
+          <text>暗影战斧</text>
+        </view>
+        <view class="g-slider-item">
+          <navigator url="../hero_detail/hero_detail"></navigator>
+          <view class="avatar">
+            <image src="http://game.gtimg.cn/images/yxzj/img201606/itemimg/1421.jpg"></image>
+          </view>
+          <text>影忍之足</text>
+        </view>
+        <view class="g-slider-item">
+          <navigator url="../hero_detail/hero_detail"></navigator>
+          <view class="avatar">
+            <image src="http://game.gtimg.cn/images/yxzj/img201606/itemimg/1134.jpg"></image>
+          </view>
+          <text>宗师之力</text>
+        </view>
+        <view class="g-slider-item">
+          <navigator url="../hero_detail/hero_detail"></navigator>
+          <view class="avatar">
+            <image src="http://game.gtimg.cn/images/yxzj/img201606/itemimg/1138.jpg"></image>
+          </view>
+          <text>破军</text>
+        </view>
+        <view class="g-slider-item">
+          <navigator url="../hero_detail/hero_detail"></navigator>
+          <view class="avatar">
+            <image src="http://game.gtimg.cn/images/yxzj/img201606/itemimg/1327.jpg"></image>
+          </view>
+          <text>反伤刺甲</text>
+        </view>
+        <view class="g-slider-item">
+          <navigator url="../herolist/herolist"></navigator>
+          <view class="avatar">
+            <image src="http://game.gtimg.cn/images/yxzj/img201606/itemimg/1338.jpg"></image>
+          </view>
+          <text>暴烈之甲</text>
+        </view>
+      </scroll-view>
+      <view class="prompt">小提示：前中期以输出装为主，后期补上一定的血量装备以保证持续输出能力</view>
+    </view>
+    <view class="equip-build">
+      <view class="equip-tlt">逆风出装</view>
+      <scroll-view class="g-slider equip-slider" scroll-x="true">
+        <view class="g-slider-item">
+          <navigator url="../hero_detail/hero_detail"></navigator>
+          <view class="avatar">
+            <image src="http://game.gtimg.cn/images/yxzj/img201606/itemimg/1522.jpg"></image>
+          </view>
+          <text>巡守利斧</text>
+        </view>
+        <view class="g-slider-item">
+          <navigator url="../hero_detail/hero_detail"></navigator>
+          <view class="avatar">
+            <image src="http://game.gtimg.cn/images/yxzj/img201606/itemimg/1421.jpg"></image>
+          </view>
+          <text>影忍之足</text>
+        </view>
+        <view class="g-slider-item">
+          <navigator url="../hero_detail/hero_detail"></navigator>
+          <view class="avatar">
+            <image src="http://game.gtimg.cn/images/yxzj/img201606/itemimg/1134.jpg"></image>
+          </view>
+          <text>宗师之力</text>
+        </view>
+        <view class="g-slider-item">
+          <navigator url="../hero_detail/hero_detail"></navigator>
+          <view class="avatar">
+            <image src="http://game.gtimg.cn/images/yxzj/img201606/itemimg/1327.jpg"></image>
+          </view>
+          <text>反伤刺甲</text>
+        </view>
+        <view class="g-slider-item">
+          <navigator url="../hero_detail/hero_detail"></navigator>
+          <view class="avatar">
+            <image src="http://game.gtimg.cn/images/yxzj/img201606/itemimg/1334.jpg"></image>
+          </view>
+          <text>不死鸟之眼</text>
+        </view>
+        <view class="g-slider-item">
+          <navigator url="../herolist/herolist"></navigator>
+          <view class="avatar">
+            <image src="http://game.gtimg.cn/images/yxzj/img201606/itemimg/1337.jpg"></image>
+          </view>
+          <text>贤者的庇护</text>
+        </view>
+      </scroll-view>
+      <view class="prompt">小提示：打野出装思路，半肉铠，主要利用控制效果配合队友输出</view>
+    </view>
   </view>
 
   <view class="section summoner">
