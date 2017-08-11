@@ -42,28 +42,20 @@
   <view class="section g-wrap skills">
     <view class="section-title">技能介绍</view>
     <view class="skill-tab">
-      <view class="skill-tab-item current">
-        <image src="http://game.gtimg.cn/images/yxzj/img201606/heroimg/193/19300.png"></image>
-      </view>
-      <view class="skill-tab-item">
-        <image src="http://game.gtimg.cn/images/yxzj/img201606/heroimg/193/19310.png"></image>
-      </view>
-      <view class="skill-tab-item">
-        <image src="http://game.gtimg.cn/images/yxzj/img201606/heroimg/193/19320.png"></image>
-      </view>
-      <view class="skill-tab-item">
-        <image src="http://game.gtimg.cn/images/yxzj/img201606/heroimg/193/19330.png"></image>
+      <view class="skill-tab-item current" wx:for="{{ skills }}">
+        <image src="{{ item.img }}"></image>
       </view>
     </view>
     <view class="skill-content">
       <view class="skill-content-item">
         <view class="skill-content-header">
-          <view class="skill-name">修罗之魂</view>
-          <view class="skill-value">(冷却值：0  消耗：0)</view>
-          <view class="skill-tag">主升</view>
+          <view class="skill-name">{{ curr_skill.name }}</view>
+          <view class="skill-value">{{ curr_skill.value }}</view>
+          <view class="skill-tag" wx:if="{{ curr_skill.isPri }}">主升</view>
+          <view class="skill-tag" wx:elif="{{ curr_skill.isSec }}">副升</view>
         </view>
-        <view class="skill-desc">被动：铠拥有精湛的战斗技巧，如果铠的挥砍（普攻与2技能）只命中了一个单位，则这个单位将受到50%额外伤害。</view>
-        <view class="prompt">小提示：在铠利用2技能攻击敌方英雄时候尽可能多的利用普攻来造成额外伤害。</view>
+        <view class="skill-desc">{{ curr_skill.des }}</view>
+        <view class="prompt">{{ curr_skill.tips }}</view>
       </view>
     </view> 
   </view>
