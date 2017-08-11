@@ -1,14 +1,15 @@
 /**app.wxss**/
 .container {
-  width: 94%;
   padding-bottom: 60rpx;
-  margin: 0 auto;
   font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+}
+.g-wrap {
+  width: 94%;
 }
 /* slider */
 .g-slider {
-  white-space: nowrap;
   display: flex;
+  white-space: nowrap;
 }
 .g-slider-item {
   position: relative;
@@ -32,6 +33,9 @@
   font-size: 28rpx;
   color: #323232;
 }
+.slider-container .section-title, .g-slider-item:first-child {
+  margin-left: 3%;
+}
 /* navigator */
 navigator {
   position: absolute;
@@ -45,7 +49,7 @@ navigator {
 }
 /* section */
 .section {
-  margin-top: 46rpx;
+  margin: 46rpx auto 0 auto;
 }
 .section-title {
   font-size: 38rpx;

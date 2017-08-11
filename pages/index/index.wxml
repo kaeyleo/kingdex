@@ -1,5 +1,5 @@
 <view class="container">
-  <view class="section">
+  <view class="section g-wrap">
     <view class="section-title">英雄分类</view>
     <view class="grid-wrp">
       <view class="grid-row">
@@ -38,7 +38,7 @@
       </view>
     </view>
   </view>
-  <view class="section">
+  <view class="section slider-container">
     <view class="section-title">周免英雄</view>
     <scroll-view class="g-slider hero-slider" scroll-x="true">
       <view class="g-slider-item">
@@ -92,7 +92,7 @@
       </view>
     </scroll-view>
   </view>
-  <view class="section">
+  <view class="section g-wrap">
     <view class="section-title">新手攻略</view>
     <view class="article-list">
       <view class="article-list-item">

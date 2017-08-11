@@ -7,12 +7,12 @@
 
 <view class="container">
 
-  <view class="hero-title">
+  <view class="hero-title g-wrap">
     <view class="role">战士</view>
     <view class="name">铠</view>
   </view>
 
-  <view class="section attr-list">
+  <view class="section g-wrap attr-list">
     <view class="attr-item">
       <text class="attr-desc">生存能力</text>
       <view class="progress">
@@ -39,7 +39,7 @@
     </view>
   </view>
 
-  <view class="section skills">
+  <view class="section g-wrap skills">
     <view class="section-title">技能介绍</view>
     <view class="skill-tab">
       <view class="skill-tab-item current">
@@ -68,7 +68,7 @@
     </view> 
   </view>
 
-  <view class="section rune">
+  <view class="section g-wrap rune">
     <view class="section-title">铭文搭配</view>
     <view class="slist">
       <view class="sitem">
@@ -91,7 +91,7 @@
     </view>
   </view>
 
-  <view class="section equip">
+  <view class="section slider-container equip">
     <view class="section-title">出装推荐</view>
     <view class="equip-build">
       <view class="equip-tlt">顺风出装</view>
@@ -191,7 +191,7 @@
     </view>
   </view>
 
-  <view class="section summoner">
+  <view class="section g-wrap summoner">
     <view class="section-title">召唤师技能</view>
     <view class="slist">
       <view class="sitem">

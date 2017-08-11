@@ -24,7 +24,11 @@
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
   z-index: 2;
 }
-
+.prompt {
+  margin-top: 8px;
+  font-size: 28rpx;
+  color: #8C9298;
+}
 .container {
   position: relative;
   margin-top: -60px;
@@ -52,15 +56,8 @@
   font-size: 26rpx;
   color: #8C9298;
 }
-
-.prompt {
-  margin-top: 8px;
-  font-size: 28rpx;
-  color: #8C9298;
-}
-
 .hero-title {
-  /* background-color: #ccc;  */
+  margin: 0 auto;
 }
 .hero-title .role {
   font-size: 40rpx;
@@ -76,7 +73,6 @@
   font-weight: bolder;
   line-height: 1;
 }
-
 .attr-list {
 
 }
@@ -95,7 +91,7 @@
   top: 7px;
   float: left;
   width: calc(100% - 80px);
-  height: 10px;
+  height: 9px;
   background-color: #CED7DF;
   border-radius: 10px;
 }
@@ -105,7 +101,6 @@
   border-radius: 10px;
   transition: 0.8s ease;
 }
-
 .skills {
 
 }
@@ -161,25 +156,28 @@
   font-size: 28rpx;
   color: #323232;
 }
-
+.equip-tlt, .equip-build .prompt {
+  margin-left: auto;
+  margin-right: auto;
+  width: 94%;
+}
 .equip-build {
   margin-bottom: 16px;
 }
 .equip-tlt {
-  margin-bottom: 10px;
-  font-size: 34rpx;
+  margin-bottom: 12px;
+  font-size: 36rpx;
   color: #555;
+  line-height: 1;
 }
 .equip-slider .avatar {
   width: 110rpx;
   height: 110rpx;
 }
-
 .rune image {
   width: 94rpx;
   height: 110rpx;
 }
-
 .summoner .slist {
   display: block;
 }
