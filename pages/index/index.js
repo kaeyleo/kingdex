@@ -1,8 +1,6 @@
 var storage = require('../../utils/storage.js');
 
-// pages/index/index.js
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -39,83 +37,29 @@ Page({
         'bg': '../../img/role/support.png'
       }
     ],
-    role: {
-      1: {
-        'name': '战士',
-        'desc': '攻守兼备，输出和生存能力都比较突出的近攻英雄。团战中站于坦克身后，有时也会充当先锋，承受大量伤害。'
-      },
-      2: {
-        'name': '法师',
-        'desc': ''
-      },
-      3: {
-        'name': '坦克',
-        'desc': ''
-      },
-      4: {
-        'name': '刺客',
-        'desc': ''
-      },
-      5: {
-        'name': '射手',
-        'desc': ''
-      },
-      6: {
-        'name': '辅助',
-        'desc': ''
-      }
-    },
-    free: [
-      {
-        'id': 121,
-        'name': '芈月', 
-        'role': 2
-      },
-      {
-        'id': 112,
-        'name': '鲁班七号',
-        'role': 5
-      },
-      {
-        'id': 134,
-        'name': '达摩',
-        'role': 1
-      },
-      {
-        'id': 114,
-        'name': '刘禅',
-        'role': 3
-      },
-      {
-        'id': 191,
-        'name': '大乔',
-        'role': 6
-      },
-      {
-        'id': 173,
-        'name': '李元芳',
-        'role': 5
-      },
-      {
-        'id': 113,
-        'name': '庄周',
-        'role': 3
-      }
-    ]
+    freehero: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function () {
+    var self = this;
+
     storage.init();
+    storage.queryFreehero(function(data) {
+      self.setData({
+        freehero: data
+      })
+    });
+    
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**

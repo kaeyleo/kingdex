@@ -11,6 +11,15 @@ module.exports = {
     console.log('初始化leancloud...')
   },
 
+  queryFreehero: function (handler) {
+    var query = new AV.Query('Free_hero');
+    query.find().then(function(res) {
+      handler(res[0].attributes.freehero);
+    }, function(err) {
+      console.error(err)
+    })
+  },
+
   queryHero: function(hero_id, handler) {
     var query = new AV.Query('Hero');
     query.equalTo('hero_id', hero_id);
