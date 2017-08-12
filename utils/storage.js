@@ -3,7 +3,7 @@ var AV = require('../libs/av-weapp-min.js'),
 
 module.exports = {
 
-  init: function() {
+  init: function () {
     AV.init({
       appId: config.appId,
       appKey: config.appKey
@@ -13,19 +13,29 @@ module.exports = {
 
   queryFreehero: function (handler) {
     var query = new AV.Query('Free_hero');
-    query.find().then(function(res) {
+    query.find().then(function (res) {
       handler(res[0].attributes.freehero);
-    }, function(err) {
+    }, function (err) {
       console.error(err)
     })
   },
 
-  queryHero: function(hero_id, handler) {
+  queryHeroList: function (role, handler) {
+    var query = new AV.Query('Hero');
+    query.equalTo('hero_type', role);
+    query.find().then(function (res) {
+      handler(res);
+    }, function (err) {
+      console.error(err)
+    })
+  },
+
+  queryHero: function (hero_id, handler) {
     var query = new AV.Query('Hero');
     query.equalTo('hero_id', hero_id);
-    query.find().then(function(res) {
+    query.find().then(function (res) {
       handler(res[0].attributes);
-    }, function(err) {
+    }, function (err) {
       console.error(err)
     });
   }

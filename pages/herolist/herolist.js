@@ -1,10 +1,10 @@
-// pages/herolist/herolist.js
+var storage = require('../../utils/storage.js');
+
 Page({
   /**
    * 页面的初始数据
    */
   data: {
-    id: null,
     header: null,
     role: {
       1: {
@@ -38,70 +38,44 @@ Page({
         'cover': '../../img/role/csupport.png'
       }
     },
-    herolist: [{
-      "hero_id": 196,
-      "hero_name": "百里守约",
-      "hero_avatar": "//game.gtimg.cn/images/yxzj/img201606/heroimg/196/196.jpg",
-      "hero_type": 5,
-      "isNew": 1
-    }, {
-      "hero_id": 193,
-      "hero_name": "铠",
-      "hero_avatar": "//game.gtimg.cn/images/yxzj/img201606/heroimg/193/193.jpg",
-      "hero_type": 1,
-      "isNew": 1
-      }, {
-        "hero_id": 189,
-        "hero_name": "鬼谷子",
-        "hero_avatar": "//game.gtimg.cn/images/yxzj/img201606/heroimg/189/189.jpg",
-        "hero_type": 6,
-        "isNew": 0
-      }, {
-        "hero_id": 182,
-        "hero_name": "干将莫邪",
-        "hero_avatar": "//game.gtimg.cn/images/yxzj/img201606/heroimg/182/182.jpg",
-        "hero_type": 2,
-        "isNew": 0
-      }, {
-        "hero_id": 192,
-        "hero_name": "黄忠",
-        "hero_avatar": "//game.gtimg.cn/images/yxzj/img201606/heroimg/192/192.jpg",
-        "hero_type": 5,
-        "isNew": 0,
-      }, {
-        "hero_id": 190,
-        "hero_name": "诸葛亮",
-        "hero_avatar": "//game.gtimg.cn/images/yxzj/img201606/heroimg/190/190.jpg",
-        "hero_type": 2,
-        "isNew": 0,
-      }, {
-        "hero_id": 180,
-        "hero_name": "哪吒",
-        "hero_avatar": "//game.gtimg.cn/images/yxzj/img201606/heroimg/180/180.jpg",
-        "hero_type": 1,
-        "isNew": 0,
-      }]
+    herolist: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var self = this;
+    var id = parseInt(options.role),
+        header_data = this.data.role[id];
+
     this.setData({
-      id: options.role
+      header: header_data
     });
+
+    storage.queryHeroList(id, function(data) {
+      var arr = [];
+      for(var i in data) {
+        var hero = data[i].attributes;
+        var hero_obj = {
+          'hero_id': hero.hero_id,
+          'hero_name': hero.hero_name,
+          'hero_avatar': 'http://' + hero.hero_avatar,
+          'isNew': hero.isNew
+        }
+        arr.push(hero_obj);
+      }
+      self.setData({
+        herolist: arr
+      })
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    var id = this.data.id,
-        obj = this.data.role[id];
 
-    this.setData({
-      header: obj
-    });
   },
 
   /**

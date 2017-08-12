@@ -12,7 +12,7 @@
     <view class="list-item" wx:for="{{ herolist }}">
       <navigator url="../hero_detail/hero_detail?id={{ item.hero_id }}"></navigator>
       <view class="list-avatar">
-        <image class="list-img" src="http://{{ item.hero_avatar }}"></image>
+        <image class="list-img" src="{{ item.hero_avatar }}"></image>
       </view>
       <view class="list-text">
         <text class="hero_name">{{ item.hero_name }}</text>
