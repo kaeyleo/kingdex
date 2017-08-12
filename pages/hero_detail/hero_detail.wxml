@@ -1,6 +1,6 @@
 <view class="header">
   <view class="cover">
-    <image src="http://game.gtimg.cn/images/yxzj/img201606/heroimg/193/193-mobileskin-1.jpg"></image>
+    <image src="http:{{ hero.hero_cover }}"></image>
   </view>
   <view class="filter"></view>
 </view>
@@ -8,33 +8,15 @@
 <view class="container">
 
   <view class="hero-title g-wrap">
-    <view class="role">战士</view>
-    <view class="name">铠</view>
+    <view class="role">{{ type[hero.hero_type] }}</view>
+    <view class="name">{{ hero.hero_name }}</view>
   </view>
 
   <view class="section g-wrap attr-list">
-    <view class="attr-item">
-      <text class="attr-desc">生存能力</text>
+    <view class="attr-item" wx:for="{{ hero.attr }}">
+      <text class="attr-desc">{{ item.name }}</text>
       <view class="progress">
-        <view class="bar" style="width: 80%;"></view>
-      </view>
-    </view>
-    <view class="attr-item">
-      <view class="attr-desc">攻击伤害</view>
-      <view class="progress">
-        <view class="bar" style="width: 70%;"></view>
-      </view>
-    </view>
-    <view class="attr-item">
-      <view class="attr-desc">技能效果</view>
-      <view class="progress">
-        <view class="bar" style="width: 40%;"></view>
-      </view>
-    </view>
-    <view class="attr-item">
-      <view class="attr-desc">上手难度</view>
-      <view class="progress">
-        <view class="bar" style="width: 30%;"></view>
+        <view class="bar" style="width: {{ item.value }}0%;"></view>
       </view>
     </view>
   </view>
@@ -42,20 +24,20 @@
   <view class="section g-wrap skills">
     <view class="section-title">技能介绍</view>
     <view class="skill-tab">
-      <view class="skill-tab-item current" wx:for="{{ skills }}">
+      <view wx:for="{{ hero.skills }}" class="skill-tab-item {{ index == curIndex ? 'current' : '' }}" data-id="{{ item.id }}" catchtap="toggle">
         <image src="{{ item.img }}"></image>
       </view>
     </view>
     <view class="skill-content">
       <view class="skill-content-item">
         <view class="skill-content-header">
-          <view class="skill-name">{{ curr_skill.name }}</view>
-          <view class="skill-value">{{ curr_skill.value }}</view>
-          <view class="skill-tag" wx:if="{{ curr_skill.isPri }}">主升</view>
-          <view class="skill-tag" wx:elif="{{ curr_skill.isSec }}">副升</view>
+          <view class="skill-name">{{ hero.skills[curIndex].name }}</view>
+          <view class="skill-value">{{ hero.skills[curIndex].value }}</view>
+          <view class="skill-tag" wx:if="{{ hero.skills[curIndex].isPri }}">主升</view>
+          <view class="skill-tag" wx:elif="{{ hero.skills[curIndex].isSec }}">副升</view>
         </view>
-        <view class="skill-desc">{{ curr_skill.des }}</view>
-        <view class="prompt">{{ curr_skill.tips }}</view>
+        <view class="skill-desc">{{ hero.skills[curIndex].des }}</view>
+        <view class="prompt">{{ hero.skills[curIndex].tips }}</view>
       </view>
     </view> 
   </view>
@@ -63,22 +45,10 @@
   <view class="section g-wrap rune">
     <view class="section-title">铭文搭配</view>
     <view class="slist">
-      <view class="sitem">
-        <image src="http://game.gtimg.cn/images/yxzj/img201606/mingwen/1503.png"></image>
-        <view class="sname">传承</view>
-        <view class="sdesc">物理攻击力+3.2</view>
-      </view>
-      <view class="sitem">
-        <image src="http://game.gtimg.cn/images/yxzj/img201606/mingwen/3514.png"></image>
-        <view class="sname">鹰眼</view>
-        <view class="sdesc">物理攻击力+0.9</view>
-        <view class="sdesc">物理穿透+6.4</view>
-      </view>
-      <view class="sitem">
-        <image src="http://game.gtimg.cn/images/yxzj/img201606/mingwen/2517.png"></image>
-        <view class="sname">隐匿</view>
-        <view class="sdesc">物理攻击力+1.6</view>
-        <view class="sdesc">移速+1%</view>
+      <view class="sitem" wx:for="{{ hero.ming }}">
+        <image src="http:{{ item.img }}"></image>
+        <view class="sname">{{ item.name }}</view>
+        <view class="sdesc" wx:for="{{ item.des }}">{{ item }}</view>
       </view>
     </view>
   </view>
@@ -88,111 +58,37 @@
     <view class="equip-build">
       <view class="equip-tlt">顺风出装</view>
       <scroll-view class="g-slider equip-slider" scroll-x="true">
-        <view class="g-slider-item">
+        <view class="g-slider-item" wx:for="{{ hero.equip['顺风出装'].data }}">
           <navigator url="../hero_detail/hero_detail"></navigator>
           <view class="avatar">
-            <image src="http://game.gtimg.cn/images/yxzj/img201606/itemimg/1137.jpg"></image>
+            <image src="http:{{ item.img }}"></image>
           </view>
-          <text>暗影战斧</text>
-        </view>
-        <view class="g-slider-item">
-          <navigator url="../hero_detail/hero_detail"></navigator>
-          <view class="avatar">
-            <image src="http://game.gtimg.cn/images/yxzj/img201606/itemimg/1421.jpg"></image>
-          </view>
-          <text>影忍之足</text>
-        </view>
-        <view class="g-slider-item">
-          <navigator url="../hero_detail/hero_detail"></navigator>
-          <view class="avatar">
-            <image src="http://game.gtimg.cn/images/yxzj/img201606/itemimg/1134.jpg"></image>
-          </view>
-          <text>宗师之力</text>
-        </view>
-        <view class="g-slider-item">
-          <navigator url="../hero_detail/hero_detail"></navigator>
-          <view class="avatar">
-            <image src="http://game.gtimg.cn/images/yxzj/img201606/itemimg/1138.jpg"></image>
-          </view>
-          <text>破军</text>
-        </view>
-        <view class="g-slider-item">
-          <navigator url="../hero_detail/hero_detail"></navigator>
-          <view class="avatar">
-            <image src="http://game.gtimg.cn/images/yxzj/img201606/itemimg/1327.jpg"></image>
-          </view>
-          <text>反伤刺甲</text>
-        </view>
-        <view class="g-slider-item">
-          <navigator url="../herolist/herolist"></navigator>
-          <view class="avatar">
-            <image src="http://game.gtimg.cn/images/yxzj/img201606/itemimg/1338.jpg"></image>
-          </view>
-          <text>暴烈之甲</text>
+          <text>{{ item.name }}</text>
         </view>
       </scroll-view>
-      <view class="prompt">小提示：前中期以输出装为主，后期补上一定的血量装备以保证持续输出能力</view>
+      <view class="prompt">{{ hero.equip['顺风出装'].tips }}</view>
     </view>
     <view class="equip-build">
       <view class="equip-tlt">逆风出装</view>
       <scroll-view class="g-slider equip-slider" scroll-x="true">
-        <view class="g-slider-item">
+        <view class="g-slider-item" wx:for="{{ hero.equip['逆风出装'].data }}">
           <navigator url="../hero_detail/hero_detail"></navigator>
           <view class="avatar">
-            <image src="http://game.gtimg.cn/images/yxzj/img201606/itemimg/1522.jpg"></image>
+            <image src="http:{{ item.img }}"></image>
           </view>
-          <text>巡守利斧</text>
-        </view>
-        <view class="g-slider-item">
-          <navigator url="../hero_detail/hero_detail"></navigator>
-          <view class="avatar">
-            <image src="http://game.gtimg.cn/images/yxzj/img201606/itemimg/1421.jpg"></image>
-          </view>
-          <text>影忍之足</text>
-        </view>
-        <view class="g-slider-item">
-          <navigator url="../hero_detail/hero_detail"></navigator>
-          <view class="avatar">
-            <image src="http://game.gtimg.cn/images/yxzj/img201606/itemimg/1134.jpg"></image>
-          </view>
-          <text>宗师之力</text>
-        </view>
-        <view class="g-slider-item">
-          <navigator url="../hero_detail/hero_detail"></navigator>
-          <view class="avatar">
-            <image src="http://game.gtimg.cn/images/yxzj/img201606/itemimg/1327.jpg"></image>
-          </view>
-          <text>反伤刺甲</text>
-        </view>
-        <view class="g-slider-item">
-          <navigator url="../hero_detail/hero_detail"></navigator>
-          <view class="avatar">
-            <image src="http://game.gtimg.cn/images/yxzj/img201606/itemimg/1334.jpg"></image>
-          </view>
-          <text>不死鸟之眼</text>
-        </view>
-        <view class="g-slider-item">
-          <navigator url="../herolist/herolist"></navigator>
-          <view class="avatar">
-            <image src="http://game.gtimg.cn/images/yxzj/img201606/itemimg/1337.jpg"></image>
-          </view>
-          <text>贤者的庇护</text>
+          <text>{{ item.name }}</text>
         </view>
       </scroll-view>
-      <view class="prompt">小提示：打野出装思路，半肉铠，主要利用控制效果配合队友输出</view>
+      <view class="prompt">{{ hero.equip['逆风出装'].tips }}</view>
     </view>
   </view>
 
   <view class="section g-wrap summoner">
     <view class="section-title">召唤师技能</view>
     <view class="slist">
-      <view class="sitem">
-        <image src="http://game.gtimg.cn/images/yxzj/img201606/summoner/80108.jpg"></image>
-        <view class="sname">斩杀</view>
-      </view>
-      <view class="sitem">
-        <image src="http://game.gtimg.cn/images/yxzj/img201606/summoner/80107.jpg"></image>
-        <view class="sname">净化</view>
+      <view class="sitem" wx:for="{{ hero.summoner }}">
+        <image src="http:{{ item.img }}"></image>
+        <view class="sname">{{ item.name }}</view>
       </view>
     </view>
   </view>

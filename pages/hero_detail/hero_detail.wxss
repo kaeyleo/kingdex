@@ -68,7 +68,7 @@
   margin-bottom: 16rpx;
 }
 .hero-title .name {
-  font-size: 72rpx;
+  font-size: 60rpx;
   color: #000;
   font-weight: bolder;
   line-height: 1;
