@@ -5,7 +5,6 @@ App({
     // var logs = wx.getStorageSync('logs') || []
     // logs.unshift(Date.now())
     // wx.setStorageSync('logs', logs)
-    console.log('开始了')
   },
 
   getUserInfo: function(cb) {

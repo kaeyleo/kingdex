@@ -38,6 +38,20 @@ module.exports = {
     }, function (err) {
       console.error(err)
     });
+  },
+
+  queryEquipList: function(type, handler) {
+    var query = new AV.Query('Equip');
+    query.equalTo('item_type', type);
+    query.find().then(function (res) {
+      handler({ 
+        status: 200,
+        data: res
+      });
+    }, function (err) {
+      handler({ status: 400 });
+      console.error(err)
+    })
   }
 
 
