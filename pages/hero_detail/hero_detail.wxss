@@ -61,7 +61,7 @@
 }
 .hero-title .role {
   font-size: 40rpx;
-  color: #D2A868;
+  color: #D2A45F;
   font-weight: bold;
    text-shadow: 0 0 12px #fff; 
   line-height: 1;

@@ -1,3 +1,26 @@
-<!--pages/equip/equip.wxml-->
-<text>pages/equip/equip.wxml</text>
-<image src="//game.gtimg.cn/images/yxzj/img201606/heroimg/193/19300.png"></image>
+<view class="container"> 
+  <scroll-view class="category-list" scroll-x="true">
+    <view class="c-item">
+      <text>攻击</text>
+    </view>
+    <view class="c-item">
+      <text>法术</text>
+    </view>
+    <view class="c-item">
+      <text>防御</text>
+    </view>
+    <view class="c-item">
+      <text>移动</text>
+    </view>
+    <view class="c-item">
+      <text>打野</text>
+    </view>
+  </scroll-view>
+  <view class="g-wrap equip-content">
+    <view class="equip-grid">
+      <navigator url=""></navigator>
+      <image class="equip-img" src="http://game.gtimg.cn/images/yxzj/img201606/itemimg/1111.jpg"></image>  
+      <view class="equip-name">铁剑</view>
+    </view>
+  </view>
+</view> 

@@ -9,7 +9,7 @@
   position: relative;
   flex: 1; 
   height: 218rpx; 
-   margin: 0 8rpx; 
+  margin: 0 8rpx; 
   border-radius: 4px; 
   overflow: hidden;
 }
