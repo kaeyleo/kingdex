@@ -35,13 +35,7 @@ Page({
   fetchData: function() {
     var self = this;
 
-    wx.showLoading({
-      title: '加载中'
-    });
-
     storage.queryEquipList(self.data.currentType, function (data) {
-      wx.hideLoading();
-      
       // 请求失败
       if (data.status === 400) {
         wx.showModal({
@@ -57,7 +51,6 @@ Page({
       }
 
       // 请求成功
-      console.log(data);
       var arr = [];
       for (var i in data.data) {
         var item = data.data[i].attributes;

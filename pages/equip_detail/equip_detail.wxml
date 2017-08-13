@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="card">
+    <view class="card-header">
+      <image class="equip-img" src="http://game.gtimg.cn/images/yxzj/img201606/itemimg/1123.jpg"></image>
+      <view class="card-title">
+        <view class="equip-name">狂暴双刃</view>
+        <view class="equip-type">攻击</view>
+      </view>
+    </view>
+    <view class="card-content">
+      <view class="equip-des">
+        <text>+40%攻击速度</text>
+        <text>+20%暴击率</text>
+      </view>
+      <view class="equip-des">
+        <text>唯一被动-精准：普通攻击附带60点物理伤害</text>
+        <text>唯一主动-驱散：90秒CD，受到的所有伤害降低50%，持续1.5秒，可以在被控制时使用。</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -6,7 +6,7 @@
   </scroll-view>
   <view class="g-wrap equip-content">
     <view class="equip-grid" wx:for="{{ equip }}">
-      <navigator url=""></navigator>
+      <navigator url="../equip_detail/equip_detail?id={{ item.item_id }}"></navigator>
       <image class="equip-img" src="http:{{ item.img }}"></image>  
       <view class="equip-name">{{ item.item_name }}</view>
     </view>

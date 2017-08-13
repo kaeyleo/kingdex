@@ -15,7 +15,7 @@
   display: inline-block;
   margin-top: 18px;
   margin-right: 8px;
-  padding: 0 14px;
+  padding: 0 12px;
   height: 30px;
   background-color: #fff;
   border-radius: 24px;

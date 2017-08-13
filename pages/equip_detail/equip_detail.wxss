@@ -1,0 +1,60 @@
+/* equip_detail.wxss */
+.container {
+  position: absolute;
+  padding-bottom: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: #FFCD46;
+}
+.card {
+  padding: 28px 16px;
+  margin: 60px auto 0 auto;
+  width: 92%;
+  min-height: 200px;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius: 6px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, .10);
+}
+.card-header {
+  margin-bottom: 16px;
+  overflow: auto;
+}
+.equip-img {
+  float: left;
+  width: 148rpx;
+  height: 148rpx;
+  border-radius: 50%;
+}
+.card-title {
+  float: left;
+  padding-top: 10px;
+  margin-left: 12px;
+}
+.equip-name {
+  font-size: 42rpx;
+  color: #333;
+}
+.equip-type {
+  display: inline-block;
+  margin-top: 3px;
+  padding: 1px 12px;
+  font-size: 28rpx;
+  color: #fff;
+  background-color: #F06161;
+  border-radius: 16px;
+}
+.card-content {
+  margin-top: 12px;
+  font-size: 32rpx;
+}
+.equip-des {
+  margin-bottom: 12px;
+  color: #4E4E4E;
+}
+.equip-des:last-child {
+  color: #949494;
+}
+.equip-des text {
+  display: block;
+}

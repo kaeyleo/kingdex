@@ -52,6 +52,20 @@ module.exports = {
       handler({ status: 400 });
       console.error(err)
     })
+  },
+
+  queryEquip: function(id, handler) {
+    var query = new AV.Query('Equip');
+    query.equalTo('item_id', id);
+    query.find().then(function (res) {
+      handler({
+        status: 200,
+        data: res
+      });
+    }, function (err) {
+      handler({ status: 400 });
+      console.error(err)
+    })
   }
 
 

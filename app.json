@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/equip/equip",
     "pages/herolist/herolist",
-    "pages/hero_detail/hero_detail"
+    "pages/hero_detail/hero_detail",
+    "pages/equip_detail/equip_detail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
