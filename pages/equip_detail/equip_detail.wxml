@@ -4,17 +4,15 @@
       <image class="equip-img" src="http:{{ equip.img }}"></image>
       <view class="card-title">
         <view class="equip-name">{{ equip.item_name }}</view>
-        <view class="equip-type">攻击</view>
+        <view class="equip-type" style="background: {{ type[currentType].color }}">{{ type[currentType].name }}</view>
       </view>
     </view>
     <view class="card-content">
       <view class="equip-des">
-        <text>+40%攻击速度</text>
-        <text>+20%暴击率</text>
+        <text wx:for="{{ equip.des1 }}">{{ item }}</text>
       </view>
-      <view class="equip-des">
-        <text>唯一被动-精准：普通攻击附带60点物理伤害</text>
-        <text>唯一主动-驱散：90秒CD，受到的所有伤害降低50%，持续1.5秒，可以在被控制时使用。</text>
+      <view class="equip-des" wx:if="{{ equip.des2 }}">
+        <text wx:for="{{ equip.des2 }}">{{ item }}</text>
       </view>
     </view>
   </view>

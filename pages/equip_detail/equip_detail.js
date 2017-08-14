@@ -1,4 +1,5 @@
-var storage = require('../../utils/storage.js');
+var storage = require('../../utils/storage.js'),
+    parser = require('../../utils/parser.js');
 
 Page({
 
@@ -7,7 +8,16 @@ Page({
    */
   data: {
     equip_id: null,
-    equip: null
+    equip: null,
+    currentType: 1,
+    type: {
+      1: { name: '攻击', color: '#F37474' },
+      2: { name: '法术', color: '#71D0B0' },
+      3: { name: '防御', color: '#B183FF' },
+      4: { name: '移动', color: '#FFD459' },
+      5: { name: '打野', color: '#60A4FF' },
+      7: { name: '辅助', color: '#FF89C3' }
+    }
   },
 
   /**
@@ -92,8 +102,15 @@ Page({
       }
       // 请求成功
       var item = data.data[0].attributes;
+      item.des1 = parser.equipDes(item.des1);
+
+      if (typeof(item.des2) !== 'undefined') {
+        item.des2 = parser.equipDes(item.des2)
+      }
+      
       self.setData({
-        equip: item
+        equip: item,
+        currentType: item.item_type
       })
     });
   },
@@ -132,6 +149,7 @@ Page({
         break;
       case 1114:
       case 1123:
+      case 1134:
       case 1211:
       case 1135:
       case 12211:
@@ -144,6 +162,7 @@ Page({
         color: '#FFCD46';
         break;
       case 1121:
+      case 1127:
       case 1128:
       case 1138:
       case 1212:
@@ -171,10 +190,8 @@ Page({
       case 1234:
       case 1235:
       case 1336:
-      case 1422:
         color = '#66D8EF';
         break;
-      case 1127:
       case 1131:
       case 1231:
       case 1335:

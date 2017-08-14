@@ -10,7 +10,7 @@
   padding: 28px 16px;
   margin: 60px auto 0 auto;
   width: 92%;
-  min-height: 200px;
+  min-height: 160px;
   background-color: #fff;
   box-sizing: border-box;
   border-radius: 6px;
@@ -24,6 +24,7 @@
   float: left;
   width: 148rpx;
   height: 148rpx;
+  background-color: #eee;
   border-radius: 50%;
 }
 .card-title {
@@ -41,7 +42,7 @@
   padding: 1px 12px;
   font-size: 28rpx;
   color: #fff;
-  background-color: #F06161;
+  background-color: #eee;
   border-radius: 16px;
 }
 .card-content {
@@ -52,9 +53,13 @@
   margin-bottom: 12px;
   color: #4E4E4E;
 }
-.equip-des:last-child {
-  color: #949494;
-}
 .equip-des text {
   display: block;
+}
+.equip-des:nth-child(2) {
+  margin-bottom: 0;
+  color: #949494;
+}
+.equip-des:nth-child(2) text {
+  margin-bottom: 8px;
 }
