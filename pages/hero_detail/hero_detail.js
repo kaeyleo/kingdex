@@ -35,7 +35,6 @@ Page({
         des = des.replace(/\<p\>/g, '').split('</p>');
 
         for (var j = 0; j < des.length - 1; j++) {
-          // console.log(des[j]);
           obj[j] = des[j];
         }
 

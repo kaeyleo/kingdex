@@ -59,7 +59,7 @@
       <view class="equip-tlt">顺风出装</view>
       <scroll-view class="g-slider equip-slider" scroll-x="true">
         <view class="g-slider-item" wx:for="{{ hero.equip['顺风出装'].data }}">
-          <navigator url="../hero_detail/hero_detail"></navigator>
+          <navigator url="../equip_detail/equip_detail?id={{ item.id }}"></navigator>
           <view class="avatar">
             <image src="http:{{ item.img }}"></image>
           </view>
@@ -72,7 +72,7 @@
       <view class="equip-tlt">逆风出装</view>
       <scroll-view class="g-slider equip-slider" scroll-x="true">
         <view class="g-slider-item" wx:for="{{ hero.equip['逆风出装'].data }}">
-          <navigator url="../hero_detail/hero_detail"></navigator>
+          <navigator url="../equip_detail/equip_detail?id={{ item.id }}"></navigator>
           <view class="avatar">
             <image src="http:{{ item.img }}"></image>
           </view>
