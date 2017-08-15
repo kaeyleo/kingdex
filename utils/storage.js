@@ -14,8 +14,12 @@ module.exports = {
   queryFreehero: function (handler) {
     var query = new AV.Query('Free_hero');
     query.find().then(function (res) {
-      handler(res[0].attributes.freehero);
+      handler({
+        status: 200,
+        data: res
+      });
     }, function (err) {
+      handler({ status: 400 });
       console.error(err)
     })
   },

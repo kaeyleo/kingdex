@@ -58,16 +58,6 @@
         <text>电竞专业术语宝典</text>
         <image src="../../img/article/jargon.png"></image>
       </view>
-      <view class="article-list-item">
-        <navigator url="../post/post"></navigator>
-        <text>关于英雄的选择</text>
-        <image src="../../img/article/skills.png"></image>
-      </view> 
-      <!-- <view class="article-list-item">
-        <navigator url="url"></navigator>
-        <text>团战指导手册</text>
-        <image src="../../img/article/teamfight.png"></image>
-      </view>  -->
     </view>
   </view>
 </view>

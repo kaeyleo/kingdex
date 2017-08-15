@@ -8,8 +8,7 @@
     "pages/ming/ming",
     "pages/ming_detail/ming_detail",
     "pages/terminology/terminology",
-    "pages/term_detail/term_detail",
-    "pages/post/post"
+    "pages/term_detail/term_detail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
