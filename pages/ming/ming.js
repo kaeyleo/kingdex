@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    type: 'yellow',
+    type: 'blue',
     grade: '1',
     ming: []
   },
@@ -16,13 +16,6 @@ Page({
    */
   onLoad: function (options) {
     this.fetchData();
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
   },
 
   fetchData: function () {
@@ -64,13 +57,23 @@ Page({
     var type = event.currentTarget.dataset.type;
     this.setData({
       type: type
-    })
+    });
+    this.fetchData();
   },
 
   setGrade: function(event) {
     var grade = event.detail.value.toString();
     this.setData({
       grade: grade
+    });
+    this.fetchData();
+  },
+
+  imgErr: function(event) {
+    var idnex = event.currentTarget.dataset.index;
+    this.data.ming[idnex].img = '//oupoyh9vv.bkt.clouddn.com/rune.png';
+    this.setData({
+      ming: this.data.ming
     })
   }
 })

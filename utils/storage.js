@@ -84,5 +84,19 @@ module.exports = {
       handler({ status: 400 });
       console.error(err)
     })
+  },
+
+  queryMing: function (id, handler) {
+    var query = new AV.Query('Ming');
+    query.equalTo('ming_id', id);
+    query.find().then(function (res) {
+      handler({
+        status: 200,
+        data: res
+      });
+    }, function (err) {
+      handler({ status: 400 });
+      console.error(err)
+    })
   }
 }

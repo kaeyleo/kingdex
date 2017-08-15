@@ -1,7 +1,10 @@
 module.exports = {
 
   mingDes: function (str) {
-
+    var arr = [];
+    arr = str.replace(/\<p\>/g, '').split('</p>');
+    arr.pop();
+    return arr;
   },
 
   equipDes: function (str) {

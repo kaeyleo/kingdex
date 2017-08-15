@@ -5,7 +5,8 @@
     "pages/hero_detail/hero_detail",
     "pages/equip/equip",
     "pages/equip_detail/equip_detail",
-    "pages/ming/ming"
+    "pages/ming/ming",
+    "pages/ming_detail/ming_detail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",

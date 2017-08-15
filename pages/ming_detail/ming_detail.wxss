@@ -1,0 +1,50 @@
+.container {
+  position: absolute;
+  padding-bottom: 0;
+  width: 100%;
+  min-height: 100%;
+}
+.bg-blue {
+  background: linear-gradient(to bottom, #F5E651, #7FCB28);
+}
+.bg-yellow {
+  background: linear-gradient(to bottom, #7BF4CF, #368FFF);
+}
+.bg-red {
+  background: linear-gradient(to bottom, #FF75A4, #FF5A56);
+}
+.card {
+  padding: 32px 16px;
+  margin: 180rpx auto 0 auto;
+  width: 66%;
+  min-height: 160px;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius: 6px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, .10);
+}
+.card text {
+  display: block;
+  text-align: center;
+}
+image {
+  display: block;
+  margin: 0 auto 8rpx auto;
+  width: 119rpx;
+  height: 140rpx;
+  min-height: 140rpx;
+}
+.name {
+  font-size: 38rpx;
+}
+.grade, .des {
+  font-size: 32rpx;
+}
+.grade {
+  margin-bottom: 24rpx;
+  color: #D3BB8E;
+}
+.des {
+  margin-bottom: 2rpx;
+  color: #4E4E4E;
+}

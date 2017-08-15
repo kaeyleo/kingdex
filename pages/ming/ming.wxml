@@ -5,8 +5,8 @@
         <text>颜色</text>
       </view>
       <view class="color-list">
-        <view class="color {{ type === 'yellow' ? 'color-active' : '' }}" catchtap="setType" data-type="yellow"></view>
         <view class="color {{ type === 'blue' ? 'color-active' : '' }}" catchtap="setType" data-type="blue"></view>
+        <view class="color {{ type === 'yellow' ? 'color-active' : '' }}" catchtap="setType" data-type="yellow"></view>
         <view class="color {{ type === 'red' ? 'color-active' : '' }}" catchtap="setType" data-type="red"></view>
       </view>
     </view>
@@ -22,7 +22,7 @@
   <view class="g-wrap grid-content">
     <view class="grid" wx:for="{{ ming }}">
       <navigator url="../ming_detail/ming_detail?id={{ item.ming_id }}"></navigator>
-      <image class="grid-item-img" src="http:{{ item.img }}"></image>  
+      <image class="grid-item-img" binderror="imgErr" data-index="{{ index }}" src="http:{{ item.img }}"></image>  
       <view class="grid-item-name">{{ item.ming_name }}</view>
     </view>
   </view>
