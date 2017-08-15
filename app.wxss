@@ -1,6 +1,6 @@
 /**app.wxss**/
 .container {
-  padding-bottom: 60rpx;
+  padding-bottom: 60rpx; 
   font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
 }
 .g-wrap {
@@ -56,4 +56,40 @@ navigator {
   color: #444;
   font-weight: 500;
   margin-bottom: 24rpx;
+}
+/* grid layout */
+.grid-content {
+  margin: 8px auto 0 auto;
+  font-size: 0;
+}
+.grid {
+  position: relative;
+  float: left;
+  display: inline-block; 
+  padding: 18px 0;
+  margin-right: .60rem; 
+  margin-bottom: .60rem;
+  width: calc( (33.33% - 0.60rem) + (0.60rem / 3) );
+  min-height: 184rpx; 
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px rgba(118, 118, 118, .08);
+  overflow: hidden;
+}
+.grid:nth-child(3n) {
+  margin-right: 0;
+}
+.grid-item-img {
+  display: block;
+  margin: 0 auto;
+  width: 132rpx;
+  height: 132rpx;
+  border-radius: 50%;
+}
+.grid-item-name {
+  margin-top: 10px;
+  font-size: 32rpx;
+  color: #535353;
+  line-height: 1;
+  text-align: center;
 }

@@ -1,10 +1,11 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/equip/equip",
     "pages/herolist/herolist",
     "pages/hero_detail/hero_detail",
-    "pages/equip_detail/equip_detail"
+    "pages/equip/equip",
+    "pages/equip_detail/equip_detail",
+    "pages/ming/ming"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
@@ -28,7 +29,7 @@
         "text": "装备"
       },
       {
-        "pagePath": "pages/equip/equip",
+        "pagePath": "pages/ming/ming",
         "text": "铭文"
       }
     ]

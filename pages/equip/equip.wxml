@@ -4,11 +4,11 @@
       <text>{{ item }}</text>
     </view>
   </scroll-view>
-  <view class="g-wrap equip-content">
-    <view class="equip-grid" wx:for="{{ equip }}">
+  <view class="g-wrap grid-content">
+    <view class="grid" wx:for="{{ equip }}">
       <navigator url="../equip_detail/equip_detail?id={{ item.item_id }}"></navigator>
-      <image class="equip-img" src="http:{{ item.img }}"></image>  
-      <view class="equip-name">{{ item.item_name }}</view>
+      <image class="grid-item-img" src="http:{{ item.img }}"></image>  
+      <view class="grid-item-name">{{ item.item_name }}</view>
     </view>
   </view>
 </view> 

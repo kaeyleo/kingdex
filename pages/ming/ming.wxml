@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="filter-panel">
+    <view class="filter-section">
+      <view class="filter-title">
+        <text>颜色</text>
+      </view>
+      <view class="color-list">
+        <view class="color {{ type === 'yellow' ? 'color-active' : '' }}" catchtap="setType" data-type="yellow"></view>
+        <view class="color {{ type === 'blue' ? 'color-active' : '' }}" catchtap="setType" data-type="blue"></view>
+        <view class="color {{ type === 'red' ? 'color-active' : '' }}" catchtap="setType" data-type="red"></view>
+      </view>
+    </view>
+    <view class="filter-section sec-grade">
+      <view class="filter-title">
+        <text>等级 {{ grade }}</text>
+      </view>
+      <view class="level">
+        <slider bindchange="setGrade" step="1" min="1" max="5" activeColor="#BDC3CF" backgroundColor="#E4E6EC" />
+      </view>
+    </view>
+  </view>
+  <view class="g-wrap grid-content">
+    <view class="grid" wx:for="{{ ming }}">
+      <navigator url="../ming_detail/ming_detail?id={{ item.ming_id }}"></navigator>
+      <image class="grid-item-img" src="http:{{ item.img }}"></image>  
+      <view class="grid-item-name">{{ item.ming_name }}</view>
+    </view>
+  </view>
+</view>

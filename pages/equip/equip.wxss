@@ -1,6 +1,6 @@
 .container {
   position: absolute;
-  /* padding-bottom: 0; */
+  padding-bottom: 0;
   width: 100%;
   min-height: 100%;
   background-color: #F8F8F8;
@@ -57,40 +57,4 @@
 }
 .c-item:nth-child(6) text::before {
   background-color: #FF89C3;
-}
-.equip-content {
-  margin: 8px auto 0 auto;
-  font-size: 0;
-}
-.equip-grid {
-  position: relative;
-  float: left;
-  display: inline-block; 
-  padding: 18px 0;
-  margin-right: .60rem; 
-  margin-bottom: .60rem;
-  width: calc( (33.33% - 0.60rem) + (0.60rem / 3) );
-  min-height: 184rpx; 
-  background-color: #fff;
-  border-radius: 4px;
-  box-shadow: 0 2px 2px rgba(118, 118, 118, .08);
-  overflow: hidden;
-}
-.equip-grid:nth-child(3n) {
-  margin-right: 0;
-}
-.equip-img {
-  display: block;
-  margin: 0 auto;
-  width: 132rpx;
-  height: 132rpx;
-  border-radius: 50%;
-  
-}
-.equip-name {
-  margin-top: 10px;
-  font-size: 32rpx;
-  color: #535353;
-  line-height: 1;
-  text-align: center;
 }
