@@ -42,7 +42,7 @@ image {
 }
 .grade {
   margin-bottom: 24rpx;
-  color: #D3BB8E;
+  color: #BFAA89;
 }
 .des {
   margin-bottom: 2rpx;

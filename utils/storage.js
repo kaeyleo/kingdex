@@ -98,5 +98,19 @@ module.exports = {
       handler({ status: 400 });
       console.error(err)
     })
+  },
+
+  queryTerm: function (handler) {
+    var query = new AV.Query('Terminology');
+    query.ascending('id');
+    query.find().then(function (res) {
+      handler({
+        status: 200,
+        data: res
+      });
+    }, function (err) {
+      handler({ status: 400 });
+      console.error(err)
+    })
   }
 }

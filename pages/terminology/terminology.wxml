@@ -1,0 +1,8 @@
+<view class="container"> 
+  <view class="g-wrap grid-content">
+    <view class="grid" wx:for="{{ term }}" catchtap="getDetail" data-id="{{ item.id }}">
+      <navigator url="../term_detail/term_detail?name={{ item.name }}&spell={{ item.spell }}&des={{ item.des }}"></navigator>
+      <view class="grid-item-name">{{ item.name }}</view>
+    </view>
+  </view>
+</view> 

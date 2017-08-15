@@ -30,16 +30,13 @@
 }
 .grid-item image {
   display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   z-index: 0;
 }
 .hero-slider image {
-  width: 106%;
-  height: 106%;
+  width: 100%;
+  height: 100%;
 }
 .hero-slider text {
   color: #7D7D7D;

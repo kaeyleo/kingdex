@@ -101,12 +101,8 @@
   border-radius: 10px;
   transition: 0.8s ease;
 }
-.skills {
-
-}
 .skill-tab {
   display: flex; 
-  /* background-color: #ccc; */
 }
 .skill-tab-item {
   flex: 1;
@@ -123,6 +119,7 @@
   border-radius: 50%;
   border: 4px solid #B9C0C5; 
   box-sizing: border-box; 
+  transition: .3s;
 }
 .skill-tab .current image {
   border: 4px solid #0089FF;

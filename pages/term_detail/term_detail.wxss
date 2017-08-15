@@ -1,0 +1,32 @@
+.container {
+  position: absolute;
+  padding-bottom: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: #eee;
+}
+.card {
+  padding: 32px 16px;
+  margin: 180rpx auto 0 auto;
+  width: 92%;
+  min-height: 160px;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius: 6px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, .10);
+}
+.card text {
+  display: block;
+}
+.name {
+  font-size: 42rpx;
+  font-weight: bold;
+}
+.spell {
+  font-size: 32rpx;
+}
+.des {
+  margin-top: 12px;
+  font-size: 32rpx;
+  color: #949494;
+}

@@ -6,7 +6,10 @@
     "pages/equip/equip",
     "pages/equip_detail/equip_detail",
     "pages/ming/ming",
-    "pages/ming_detail/ming_detail"
+    "pages/ming_detail/ming_detail",
+    "pages/terminology/terminology",
+    "pages/term_detail/term_detail",
+    "pages/post/post"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",

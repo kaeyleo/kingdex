@@ -42,6 +42,7 @@
   background-color: #81B2ED;
   border-radius: 50%;
   border: 16rpx solid #fff;
+  transition: .4s;
 }
 .color:nth-child(1) {
   background-color: #AEED59;

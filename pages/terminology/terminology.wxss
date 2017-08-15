@@ -1,0 +1,19 @@
+.container {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  background-color: #F8F8F8;
+}
+.grid-content {
+  margin-top: 16px;
+}
+.grid {
+  position: relative;
+  min-height: 100rpx;
+  text-align: center;
+}
+.grid-item-name {
+  margin: 0;
+  display: inline-block;
+  line-height: 100rpx;
+}

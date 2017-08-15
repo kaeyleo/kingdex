@@ -1,0 +1,34 @@
+/* post.wxss */
+.container {
+  margin: 0 auto;
+}
+.post {
+  margin-top: 60rpx;
+  font-size: 32rpx;
+  color: #555;
+  line-height: 1.6;
+  letter-spacing: 2rpx;
+}
+.post image {
+  width: 100%;
+}
+.post text {
+  display: block;
+}
+.title, .subtitle {
+  color: #333;
+  line-height: 1.2;
+  font-weight: bold;
+}
+.title {
+  margin-bottom: 68rpx;
+  font-size: 46rpx;
+}
+image, .p {
+  margin-bottom: 32rpx;
+}
+.subtitle {
+  margin-top: 60rpx;
+  margin-bottom: 32rpx;
+  font-size: 36rpx;
+}

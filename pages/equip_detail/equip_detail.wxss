@@ -7,7 +7,7 @@
   background-color: #FFCD46;
 }
 .card {
-  padding: 28px 16px;
+  padding: 30px 16px;
   margin: 60px auto 0 auto;
   width: 92%;
   min-height: 160px;
@@ -29,7 +29,7 @@
 }
 .card-title {
   float: left;
-  padding-top: 10px;
+  padding-top: 8px;
   margin-left: 12px;
 }
 .equip-name {
