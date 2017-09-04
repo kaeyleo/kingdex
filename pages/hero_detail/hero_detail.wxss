@@ -1,7 +1,7 @@
 /* hero_detail.wxss */
 .header {
   position: relative;
-  height: 510rpx;
+  height: 400rpx;
 }
 .cover {
   position: absolute;
@@ -10,29 +10,51 @@
   width: 100%;
   height: 100%;
   z-index: 0;
+  overflow: hidden; 
 }
 .cover image {
   width: 100%;
-  height: 100%;
 }
 .filter {
   position: absolute; 
   bottom: 0; 
   left: 0; 
   width: 100%;
-  height: 350rpx;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  height: 60%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 60%, rgba(255, 255, 255, 1));
   z-index: 2;
 }
+.hero-title {
+  position: absolute;
+  bottom: 0; 
+  left: 3%;
+  z-index: 3;
+}
+.hero-title .role {
+  font-size: 40rpx;
+  color: #DBAC5A;
+  font-weight: bold;
+  text-shadow: 0 0 12px #fff; 
+  line-height: 1;
+  margin-bottom: 16rpx;
+}
+.hero-title .name {
+  font-size: 60rpx;
+  color: #000;
+  font-weight: bolder;
+  line-height: 1;
+}
+.section {
+  padding: 16px 3%;
+  background-color: #fff;
+}
 .prompt {
-  margin-top: 8px;
-  font-size: 28rpx;
+  margin-top: 12px;
+  font-size: 30rpx;
   color: #8C9298;
 }
 .container {
-  position: relative;
-  margin-top: -60px;
-  z-index: 3;
+  background-color: #F8F8F8;
 }
 .slist {
   display: flex;
@@ -49,29 +71,12 @@
 }
 .sname {
   margin-top: 8px;
-  font-size: 28rpx;
+  font-size: 30rpx;
   color: #323232;
 }
 .sdesc {
   font-size: 26rpx;
   color: #8C9298;
-}
-.hero-title {
-  margin: 0 auto;
-}
-.hero-title .role {
-  font-size: 40rpx;
-  color: #D2A45F;
-  font-weight: bold;
-   text-shadow: 0 0 12px #fff; 
-  line-height: 1;
-  margin-bottom: 16rpx;
-}
-.hero-title .name {
-  font-size: 60rpx;
-  color: #000;
-  font-weight: bolder;
-  line-height: 1;
 }
 .attr-list {
 
@@ -83,8 +88,8 @@
 .attr-desc {
   float: left;
   width: 80px; 
-  font-size: 16px;
-  color: #61666B;
+  font-size: 32rpx;
+  color: #7D7D7D;
 }
 .attr-item .progress {
   position: relative;
@@ -92,14 +97,34 @@
   float: left;
   width: calc(100% - 80px);
   height: 9px;
-  background-color: #CED7DF;
+  background-color: #E1E9F0;
   border-radius: 10px;
 }
 .attr-item .progress .bar {
   height: 100%;
-  background-color: #0089FF;
+  background-color: #4A98FF;
   border-radius: 10px;
-  transition: 0.8s ease;
+}
+.hero-nav {
+  margin-top: 10px;
+  display: flex;
+  height: 44px;
+  background-color: #fff;
+  border-bottom: 1px solid #E4E7EB;
+}
+.nav-item {
+  flex: 1;
+  margin: 0 120rpx; 
+  font-size: 32rpx;
+  color: #A3A7AE;
+  text-align: center;
+  line-height: 44px;
+  border-bottom: 0px solid #CE9E4A;
+  transition: color .3s, border-bottom .2s;
+}
+.nav-current {
+  color: #CE9E4A;
+  border-bottom: 2px solid #CE9E4A;
 }
 .skill-tab {
   display: flex; 
@@ -116,26 +141,26 @@
   margin: 0 auto;
   width: 128rpx;
   height: 128rpx;
+  padding: 3px;
   border-radius: 50%;
-  border: 4px solid #B9C0C5; 
+  border: 2px solid #C6CBCF; 
   box-sizing: border-box; 
   transition: .3s;
 }
 .skill-tab .current image {
-  border: 4px solid #0089FF;
+  border-color: #E7C17D;
 }
 .skill-content {
-  margin-top: 16px;
-}
-.skill-content-item {
-
+  margin-top: 8px; 
 }
 .skill-content-header {
   position: relative;
+  margin-top: 14px;
 }
 .skill-name {
   font-size: 32rpx;
   color: #323232;
+  font-weight: bold;
 }
 .skill-value {
   font-size: 26rpx;
@@ -153,9 +178,13 @@
   border-radius: 10px;
 }
 .skill-desc {
-  margin-top: 8px;
-  font-size: 28rpx;
+  margin-top: 12px;
+  font-size: 30rpx;
   color: #323232;
+}
+.slider-container {
+  padding-left: 0;
+  padding-right: 0;
 }
 .equip-tlt, .equip-build .prompt {
   margin-left: auto;
@@ -163,11 +192,14 @@
   width: 94%;
 }
 .equip-build {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+}
+.equip-build:last-child {
+  margin-bottom: 0;
 }
 .equip-tlt {
   margin-bottom: 12px;
-  font-size: 36rpx;
+  font-size: 32rpx;
   color: #555;
   line-height: 1;
 }

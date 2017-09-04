@@ -9,9 +9,11 @@
 /* slider */
 .g-slider {
   display: flex;
-  white-space: nowrap;
+  white-space: nowrap; 
+  overflow: scroll;
 }
 .g-slider-item {
+  flex: 1;
   position: relative;
   display: inline-block;
   margin-right: 36rpx;  
@@ -34,8 +36,8 @@
   color: #323232;
 }
 .slider-container .section-title, .g-slider-item:first-child {
-  margin-left: 3%;
-}
+  margin-left: 3%; 
+} 
 /* navigator */
 navigator {
   position: absolute;
@@ -49,7 +51,7 @@ navigator {
 }
 /* section */
 .section {
-  margin: 46rpx auto 0 auto;
+  margin: 0 auto 10px auto;   
 }
 .section-title {
   font-size: 38rpx;

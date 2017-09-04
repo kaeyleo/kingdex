@@ -7,7 +7,8 @@ Page({
    */
   data: {
     hero_id: null,
-    curIndex: 0,
+    skill_index: 0,
+    nav_index: 0,
     hero: {},
     type: {
       "1": "战士",
@@ -48,6 +49,13 @@ Page({
     });
   },
 
+  toggleNav: function (event) {
+    var index = event.currentTarget.dataset.tabindex;
+    this.setData({
+      nav_index: index
+    });
+  },
+
   toggle: function (event) {
     var skill_id = event.currentTarget.dataset.id,
         skill_arr = this.data.hero.skills;
@@ -59,11 +67,7 @@ Page({
     var index = skill_arr.indexOf(obj);
 
     this.setData({
-      curIndex: index
+      skill_index: index
     });
-  },
-
-  mingDesParser: function(str) {
-    return str + 'SB';
   }
 })

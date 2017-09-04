@@ -1,18 +1,17 @@
 <view class="header">
   <view class="cover">
-    <image src="http:{{ hero.hero_cover }}"></image>
+    <image src="http:{{ hero.hero_cover }}" mode="widthFix"></image>
   </view>
   <view class="filter"></view>
+  <view class="hero-title">
+    <view class="role">{{ type[hero.hero_type] }}</view>
+    <view class="name">{{ hero.hero_name }}</view>
+  </view>
 </view>
 
 <view class="container">
 
-  <view class="hero-title g-wrap">
-    <view class="role">{{ type[hero.hero_type] }}</view>
-    <view class="name">{{ hero.hero_name }}</view>
-  </view>
-
-  <view class="section g-wrap attr-list">
+  <view class="section attr-list">
     <view class="attr-item" wx:for="{{ hero.attr }}">
       <text class="attr-desc">{{ item.name }}</text>
       <view class="progress">
@@ -21,76 +20,89 @@
     </view>
   </view>
 
-  <view class="section g-wrap skills">
-    <view class="section-title">技能介绍</view>
-    <view class="skill-tab">
-      <view wx:for="{{ hero.skills }}" class="skill-tab-item {{ index == curIndex ? 'current' : '' }}" data-id="{{ item.id }}" catchtap="toggle">
-        <image src="{{ item.img }}"></image>
-      </view>
-    </view>
-    <view class="skill-content">
-      <view class="skill-content-item">
-        <view class="skill-content-header">
-          <view class="skill-name">{{ hero.skills[curIndex].name }}</view>
-          <view class="skill-value">{{ hero.skills[curIndex].value }}</view>
-          <view class="skill-tag" wx:if="{{ hero.skills[curIndex].isPri }}">主升</view>
-          <view class="skill-tag" wx:elif="{{ hero.skills[curIndex].isSec }}">副升</view>
-        </view>
-        <view class="skill-desc">{{ hero.skills[curIndex].des }}</view>
-        <view class="prompt">{{ hero.skills[curIndex].tips }}</view>
-      </view>
-    </view> 
+  <view class="hero-nav">
+    <view class="nav-item {{ nav_index == 0 ? 'nav-current' : '' }}" catchtap="toggleNav" data-tabindex="0">技能加点</view>
+    <view class="nav-item {{ nav_index == 1 ? 'nav-current' : '' }}" catchtap="toggleNav" data-tabindex="1">铭文出装</view>
   </view>
 
-  <view class="section g-wrap rune">
-    <view class="section-title">铭文搭配</view>
-    <view class="slist">
-      <view class="sitem" wx:for="{{ hero.ming }}">
-        <image src="http:{{ item.img }}"></image>
-        <view class="sname">{{ item.name }}</view>
-        <view class="sdesc" wx:for="{{ item.des }}">{{ item }}</view>
-      </view>
-    </view>
-  </view>
-
-  <view class="section slider-container equip">
-    <view class="section-title">出装推荐</view>
-    <view class="equip-build">
-      <view class="equip-tlt">顺风出装</view>
-      <scroll-view class="g-slider equip-slider" scroll-x="true">
-        <view class="g-slider-item" wx:for="{{ hero.equip['顺风出装'].data }}">
-          <navigator url="../equip_detail/equip_detail?id={{ item.id }}"></navigator>
-          <view class="avatar">
-            <image src="http:{{ item.img }}"></image>
+  <view class="tab-content">
+    <!--技能加点-->
+    <view class="tab-content-item" hidden="{{ nav_index != 0 }}">
+      <!--介绍-->
+      <view class="section skills">
+        <view class="section-title">技能介绍</view>
+        <view class="skill-tab">
+          <view wx:for="{{ hero.skills }}" class="skill-tab-item {{ index == skill_index ? 'current' : '' }}" data-id="{{ item.id }}" catchtap="toggle">
+              <image src="{{ item.img }}"></image>
           </view>
-          <text>{{ item.name }}</text>
         </view>
-      </scroll-view>
-      <view class="prompt">{{ hero.equip['顺风出装'].tips }}</view>
-    </view>
-    <view class="equip-build">
-      <view class="equip-tlt">逆风出装</view>
-      <scroll-view class="g-slider equip-slider" scroll-x="true">
-        <view class="g-slider-item" wx:for="{{ hero.equip['逆风出装'].data }}">
-          <navigator url="../equip_detail/equip_detail?id={{ item.id }}"></navigator>
-          <view class="avatar">
-            <image src="http:{{ item.img }}"></image>
+        <view class="skill-content">
+          <view class="skill-content-item">
+            <view class="skill-content-header">
+              <view class="skill-name">{{ hero.skills[skill_index].name }}</view>
+              <view class="skill-value">{{ hero.skills[skill_index].value }}</view>
+              <view class="skill-tag" wx:if="{{ hero.skills[skill_index].isPri }}">主升</view>
+              <view class="skill-tag" wx:elif="{{ hero.skills[skill_index].isSec }}">副升</view>
+            </view>
+            <view class="skill-desc">{{ hero.skills[skill_index].des }}</view>
+            <view class="prompt">{{ hero.skills[skill_index].tips }}</view>
           </view>
-          <text>{{ item.name }}</text>
+        </view> 
+      </view>
+      <!--召唤师技能-->
+      <view class="section summoner">
+        <view class="section-title">召唤师技能</view>
+        <view class="slist">
+          <view class="sitem" wx:for="{{ hero.summoner }}">
+            <image src="http:{{ item.img }}"></image>
+            <view class="sname">{{ item.name }}</view>
+          </view>
         </view>
-      </scroll-view>
-      <view class="prompt">{{ hero.equip['逆风出装'].tips }}</view>
+      </view>
     </view>
-  </view>
-
-  <view class="section g-wrap summoner">
-    <view class="section-title">召唤师技能</view>
-    <view class="slist">
-      <view class="sitem" wx:for="{{ hero.summoner }}">
-        <image src="http:{{ item.img }}"></image>
-        <view class="sname">{{ item.name }}</view>
+    <!--铭文出装-->
+    <view class="tab-content-item" hidden="{{ nav_index != 1 }}">
+      <!--出装-->
+      <view class="section slider-container equip">
+        <view class="section-title">出装推荐</view>
+        <view class="equip-build">
+          <view class="equip-tlt">顺风出装</view>
+          <scroll-view class="g-slider equip-slider" scroll-x="true">
+            <view class="g-slider-item" wx:for="{{ hero.equip['顺风出装'].data }}">
+              <navigator url="../equip_detail/equip_detail?id={{ item.id }}"></navigator>
+              <view class="avatar">
+                <image src="http:{{ item.img }}"></image>
+              </view>
+              <text>{{ item.name }}</text>
+            </view>
+          </scroll-view>
+          <view class="prompt">{{ hero.equip['顺风出装'].tips }}</view>
+        </view>
+        <view class="equip-build">
+          <view class="equip-tlt">逆风出装</view>
+          <scroll-view class="g-slider equip-slider" scroll-x="true">
+            <view class="g-slider-item" wx:for="{{ hero.equip['逆风出装'].data }}">
+              <navigator url="../equip_detail/equip_detail?id={{ item.id }}"></navigator>
+              <view class="avatar">
+                <image src="http:{{ item.img }}"></image>
+              </view>
+              <text>{{ item.name }}</text>
+            </view>
+          </scroll-view>
+          <view class="prompt">{{ hero.equip['逆风出装'].tips }}</view>
+        </view>
+      </view>
+      <!--铭文-->
+      <view class="section rune">
+        <view class="section-title">铭文搭配</view>
+        <view class="slist">
+          <view class="sitem" wx:for="{{ hero.ming }}">
+            <image src="http:{{ item.img }}"></image>
+            <view class="sname">{{ item.name }}</view>
+            <view class="sdesc" wx:for="{{ item.des }}">{{ item }}</view>
+          </view>
+        </view>
       </view>
     </view>
   </view>
-
 </view>
