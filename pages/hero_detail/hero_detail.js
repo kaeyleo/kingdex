@@ -52,7 +52,7 @@ Page({
   onShareAppMessage: function () {
     return {
       title: '【英雄详情】' + this.data.hero.hero_name,
-      path: 'pages/hero_detail/hero_detail?' + this.data.hero_id
+      path: 'pages/hero_detail/hero_detail?id=' + this.data.hero.hero_id
     }
   },
 

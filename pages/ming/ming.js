@@ -21,7 +21,7 @@ Page({
   onShareAppMessage: function () {
     return {
       title: '王者荣耀铭文百科，快来看看吧',
-      path: 'pages/equip/equip'
+      path: 'pages/ming/ming'
     }
   },
 

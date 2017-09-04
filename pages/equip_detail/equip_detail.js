@@ -37,7 +37,7 @@ Page({
   onShareAppMessage: function () {
     return {
       title: '【装备详情】' + this.data.equip.item_name,
-      path: 'pages/equip_detail/equip_detail?' + this.data.equip_id
+      path: 'pages/equip_detail/equip_detail?id=' + this.data.equip_id
     }
   },
 

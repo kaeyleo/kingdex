@@ -33,7 +33,7 @@ Page({
   onShareAppMessage: function () {
     return {
       title: '【铭文详情】' + this.data.ming.ming_name,
-      path: 'pages/ming_detail/ming_detail?' + this.data.ming_id
+      path: 'pages/ming_detail/ming_detail?id=' + this.data.ming_id
     }
   },
 
