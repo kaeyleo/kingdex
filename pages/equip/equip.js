@@ -25,11 +25,11 @@ Page({
     this.fetchData();
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
+  onShareAppMessage: function () {
+    return {
+      title: '王者荣耀装备百科，快来看看吧',
+      path: 'pages/equip/equip'
+    }
   },
 
   fetchData: function() {

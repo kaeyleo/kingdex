@@ -30,11 +30,11 @@ Page({
     this.fetchData();
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
+  onShareAppMessage: function () {
+    return {
+      title: '【铭文详情】' + this.data.ming.ming_name,
+      path: 'pages/ming_detail/ming_detail?' + this.data.ming_id
+    }
   },
 
   fetchData: function () {

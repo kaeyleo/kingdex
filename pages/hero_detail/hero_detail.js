@@ -49,6 +49,13 @@ Page({
     });
   },
 
+  onShareAppMessage: function () {
+    return {
+      title: '【英雄详情】' + this.data.hero.hero_name,
+      path: 'pages/hero_detail/hero_detail?' + this.data.hero_id
+    }
+  },
+
   toggleNav: function (event) {
     var index = event.currentTarget.dataset.tabindex;
     this.setData({

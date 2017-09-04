@@ -16,18 +16,11 @@ Page({
     this.fetchData()
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
- 
+  onShareAppMessage: function () {
+    return {
+      title: 'MOBA游戏术语宝典',
+      path: 'pages/terminology/terminology'
+    }
   },
 
   fetchData: function () {

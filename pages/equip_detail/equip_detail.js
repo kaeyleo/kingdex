@@ -34,6 +34,13 @@ Page({
     this.fetchData();
   },
 
+  onShareAppMessage: function () {
+    return {
+      title: '【装备详情】' + this.data.equip.item_name,
+      path: 'pages/equip_detail/equip_detail?' + this.data.equip_id
+    }
+  },
+
   fetchData: function() {
     var self = this;
     var eid = self.data.equip_id;

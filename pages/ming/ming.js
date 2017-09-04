@@ -18,6 +18,13 @@ Page({
     this.fetchData();
   },
 
+  onShareAppMessage: function () {
+    return {
+      title: '王者荣耀铭文百科，快来看看吧',
+      path: 'pages/equip/equip'
+    }
+  },
+
   fetchData: function () {
     var self = this;
     var condition = {

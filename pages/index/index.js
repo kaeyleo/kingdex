@@ -47,6 +47,13 @@ Page({
     this.fetchData();
   },
 
+  onShareAppMessage: function () {
+    return {
+      title: '王者荣耀百科图鉴，快来看看吧',
+      path: 'pages/index/index'
+    }
+  },
+
   fetchData: function () {
     var self = this;
 
