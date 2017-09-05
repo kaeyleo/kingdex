@@ -71,3 +71,11 @@
   height: 100%;
   z-index: 0;
 }
+.about {
+  margin-top: 20px;
+}
+.about-des {
+  font-size: 28rpx;
+  color: #BFC5CC;
+  text-align: center;
+} 

@@ -60,4 +60,8 @@
       </view>
     </view>
   </view>
+  <view class="about">
+    <view class="about-des">建议&合作</view>
+    <view class="about-des">kyleochn@foxmail.com</view>
+  </view>
 </view>
